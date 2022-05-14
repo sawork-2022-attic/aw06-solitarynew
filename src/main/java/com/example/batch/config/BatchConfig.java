@@ -2,6 +2,7 @@ package com.example.batch.config;
 
 import com.example.batch.model.Product;
 import com.example.batch.service.JsonFileReader;
+import com.example.batch.service.JsonReader;
 import com.example.batch.service.ProductProcessor;
 import com.example.batch.service.ProductWriter;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -34,7 +35,8 @@ public class BatchConfig {
 
     @Bean
     public ItemReader<JsonNode> itemReader() {
-        return new JsonFileReader("/home/java/meta_Clothing_Shoes_and_Jewelry.json");
+        //return new JsonFileReader("/home/java/meta_Clothing_Shoes_and_Jewelry.json");
+        return new JsonReader();
     }
 
     @Bean
