@@ -1,5 +1,16 @@
 # aw06
 
+- 下载了meta_All_Beauty.json和meta_Appliances.json两个数据集
+
+![image-20220514183331785](README.assets/image-20220514183331785.png)
+
+- 建立数据表，使用Mybatis-Plus持久层框架将数据存入数据库中，其中category等List类型字段编写typeHandler处理（使用fastjson）![image-20220514183529213](README.assets/image-20220514183529213.png)
+
+- 在aw04中，同样使用Mybatis-Plus持久层框架读取数据，编写实现了PosDB的Amazon类，将aw06中的Product读取并转化为aw04中的Product，结果如下：
+
+![image-20220514180714430](README.assets/image-20220514180714430.png)
+
+
 
 [Amazon Review Data (2018)](https://nijianmo.github.io/amazon/index.html) has a huge products metadata set of multiple categories.
 
